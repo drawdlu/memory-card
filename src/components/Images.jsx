@@ -77,20 +77,22 @@ export default function Images({ goodClick, badClick }) {
   }
 
   return (
-    <div className="images">
+    <>
       {imageData ? (
-        imageData.map((data) => (
-          <ImageCard
-            url={data.url}
-            onClick={handleClick}
-            key={data.id}
-            id={data.id}
-          />
-        ))
+        <div className="images">
+          {imageData.map((data) => (
+            <ImageCard
+              url={data.url}
+              onClick={handleClick}
+              key={data.id}
+              id={data.id}
+            />
+          ))}
+        </div>
       ) : (
         <div className="loading">Loading Images</div>
       )}
-    </div>
+    </>
   );
 }
 
