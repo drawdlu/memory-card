@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ImageCard from "./ImageCard";
+import "../style/Images.css";
 
 export default function Images({ goodClick, badClick }) {
   const [imageData, setImageData] = useState(null);
@@ -77,16 +78,18 @@ export default function Images({ goodClick, badClick }) {
 
   return (
     <div className="images">
-      {imageData
-        ? imageData.map((data) => (
-            <ImageCard
-              url={data.url}
-              onClick={handleClick}
-              key={data.id}
-              id={data.id}
-            />
-          ))
-        : "Loading"}
+      {imageData ? (
+        imageData.map((data) => (
+          <ImageCard
+            url={data.url}
+            onClick={handleClick}
+            key={data.id}
+            id={data.id}
+          />
+        ))
+      ) : (
+        <div className="loading">Loading Images</div>
+      )}
     </div>
   );
 }
@@ -117,7 +120,7 @@ function getUniquePokemonIds() {
   const ids = new Set();
   const maxId = 1025;
 
-  while (ids.size < 20) {
+  while (ids.size < 15) {
     const randomId = Math.floor(Math.random() * maxId) + 1;
     if (ids.has(randomId)) continue;
 

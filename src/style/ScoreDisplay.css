@@ -1,0 +1,11 @@
+.scoreDisplay {
+  display: flex;
+  gap: 5ch;
+}
+
+.scoreDisplay .score {
+  font-weight: bold;
+  background-color: #22396f;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}

@@ -1,14 +1,19 @@
 .pokemon-image {
   max-height: 100%;
+  padding: 1rem;
   width: auto;
   object-fit: contain;
 }
 
 button {
-  width: 200px;
-  height: 200px;
+  --image-background-color: #3d4967;
+  transition-duration: 0.3s;
+  background-color: var(--image-background-color);
+  border-radius: 10px;
 }
 
 button:hover {
+  transform: scale(110%);
   cursor: pointer;
+  transition-duration: 0.3s;
 }
