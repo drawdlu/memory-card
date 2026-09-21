@@ -1,0 +1,14 @@
+.pokemon-image {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+button {
+  width: 200px;
+  height: 200px;
+}
+
+button:hover {
+  cursor: pointer;
+}
