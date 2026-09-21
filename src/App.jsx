@@ -17,14 +17,19 @@ function App() {
   }
 
   return (
-    <div class="main">
-      <div className="title">
-        <h1>Pokemon Memory Game</h1>
-        <p>Train your memory! Click each pokemon once</p>
+    <>
+      <div class="main">
+        <div className="title">
+          <h1>Pokemon Memory Game</h1>
+          <p>Train your memory! Click each pokemon once</p>
+        </div>
+        <ScoreDisplay bestScore={bestScore} currentScore={currentScore} />
+        <Images goodClick={handleGoodClick} badClick={handleBadClick} />
       </div>
-      <ScoreDisplay bestScore={bestScore} currentScore={currentScore} />
-      <Images goodClick={handleGoodClick} badClick={handleBadClick} />
-    </div>
+      <div className="footer">
+        Photos from <a href="https://pokeapi.co/">PokeAPI</a>
+      </div>
+    </>
   );
 }
 

@@ -16,6 +16,9 @@
 
 html {
   --main-background-color: #0d1c42;
+  --main-font-color: #fcf1d0;
+
+  color: var(--main-font-color);
 
   font-family:
     "google-sans-flex",

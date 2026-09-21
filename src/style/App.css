@@ -1,7 +1,4 @@
 .main {
-  --main-font-color: #fcf1d0;
-
-  color: var(--main-font-color);
   margin: 2rem 25rem;
   display: flex;
   flex-direction: column;
@@ -16,4 +13,19 @@
 
 .title h1 {
   font-size: 3rem;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer a {
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+
+.footer a:hover {
+  transition-duration: 0.5s;
+  transform: translateY(-5px);
+  color: red;
 }
